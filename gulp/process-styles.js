@@ -8,6 +8,7 @@ const processSass = require('gulp-sass');
 const cleanCss = require('gulp-clean-css');
 const purgeCss = require('gulp-css-purge');
 const stripCssComments = require('gulp-strip-css-comments');
+const inlineCss = require('gulp-inline-css');
 
 const Styles = {
 	processProd: function () {
@@ -39,8 +40,15 @@ const Styles = {
 			}))
 			.pipe(gulp.dest(vars.paths.styles.dest))
 			.pipe(localServer.reload());
-	}
+	},
+	processInline: function () {
+		return gulp.src(vars.paths.handlebars.dest + '*.html')
+			.pipe(plumber())
+			.pipe(inlineCss())
+			.pipe(gulp.dest(vars.paths.handlebars.dest))
+	},
 };
 
 gulp.task('process-styles', [], Styles.processDevel);
 gulp.task('process-styles-prod', [], Styles.processProd);
+gulp.task('process-styles-inline', [], Styles.processInline);
