@@ -35,6 +35,7 @@ gulp.task('default', function(done) {
 gulp.task('build', function (done) {
 	sequence(
 		['clean-sheet'],
+		['process-handlebars'],
 		['process-styles-prod', 'process-scripts-prod'],
 		done);
 });
