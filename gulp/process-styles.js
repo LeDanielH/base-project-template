@@ -44,7 +44,10 @@ const Styles = {
 	processInline: function () {
 		return gulp.src(vars.paths.handlebars.dest + '*.html')
 			.pipe(plumber())
-			.pipe(inlineCss())
+			.pipe(inlineCss({
+				removeStyleTags: false,
+				applyStyleTags: false,
+			}))
 			.pipe(gulp.dest(vars.paths.handlebars.dest))
 	},
 };

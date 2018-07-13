@@ -1,0 +1,11 @@
+.button {
+	td {
+		@include padding(($sp-base * 0.5) $sp-base);
+		border-radius: $br;
+	}
+
+	a {
+		@extend .font-text;
+		color: $c-text-light;
+	}
+}

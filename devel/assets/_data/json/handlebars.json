@@ -118,5 +118,42 @@
 	"VariableSymbol": {
 		"_former": "{10}",
 		"value": "12345678"
+	},
+	"error": {
+		"Date": {
+			"LetterSend": {
+				"_former": "{12:d}",
+				"value": "24.12.2412"
+			},
+			"PayUntil": {
+				"_former": "{24:d}",
+				"value": "25.12. 2512"
+			},
+			"AddresseeAcknowledged": {
+				"_former": "{31:d}",
+				"value": "19.9.1999"
+			},
+			"Zesplatneni": {
+				"_former": "{23:d}",
+				"value": "13.3.2003"
+			}
+		},
+	
+		"Address": {
+			"Addressee": {
+				"Street": {
+					"_former": "{19}",
+					"value": "Hnidov 123"
+				},
+				"ZipCode": {
+					"_former": "{20}",
+					"value": "123 45"
+				},
+				"City": {
+					"_former": "{21}",
+					"value": "Hnedka"
+				}
+			}
+		}
 	}
 }

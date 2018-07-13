@@ -1,0 +1,44 @@
+table {
+	border-collapse: collapse;
+}
+
+.tb {
+	&__fixed {
+		table-layout: fixed;
+	}
+}
+
+.content {
+	& > td {
+		@include padding(0 $sp-base * 2);
+	}
+
+	&__errors {
+
+		th {
+			border-bottom: 2px solid $c-border-dark;
+			@extend .font-text;
+
+			span {
+				font-size: $fs-text * 1.2;
+				text-transform: uppercase;
+				font-weight: $fw-bold;
+				color: $c-text-dark;
+			}
+		}
+
+		td {
+			border-bottom: 1px solid $c-border-dim;
+			@include padding($sp-base * 0.5);
+			color: $c-text-dark;
+			@extend .font-text;
+			&:last-of-type {
+				font-size: $fs-text * 0.9;
+			}
+		}
+	}
+}
+
+td.logo {
+	@include padding($sp-base * 2);
+}

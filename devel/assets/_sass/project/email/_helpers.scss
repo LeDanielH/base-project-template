@@ -1,0 +1,56 @@
+.font {
+	font-family: 'Roboto', sans-serif;
+	color: $c-text-dark;
+}
+
+.font-text {
+	@extend .font;
+	font-size: $fs-text;
+	font-weight: $fw-regular;
+}
+
+.font-text-dim {
+	@extend .font-text;
+	color: $c-grey;
+}
+
+.font-title {
+	@extend .font;
+	font-size: $fs-title;
+	font-weight: $fw-bold;
+}
+
+.link {
+	text-decoration: none;
+}
+
+.success {
+	color: $c-success;
+}
+
+.download-test {
+	color: $c-download;
+}
+
+.download-export {
+	color: lighten($c-download, 20%);
+}
+
+.with-spacing {
+	@include padding($sp-base);
+}
+
+.br {
+	&__top {
+		border-top-left-radius: $br * 4;
+		border-top-right-radius: $br * 4;
+	}
+	&__bottom {
+		border-bottom-left-radius: $br * 4;
+		border-bottom-right-radius: $br * 4;
+	}
+	&__all {
+		border-radius: $br * 4;
+		border-collapse: separate !important;
+	}
+}
